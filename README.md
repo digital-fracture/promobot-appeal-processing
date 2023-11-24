@@ -1,19 +1,19 @@
 # Promobot Appeal Processing
 
-[![PyPI - Version](https://img.shields.io/pypi/v/promobot-appeal-processing.svg)](https://pypi.org/project/promobot-appeal-processing)
+[![PyPI - Version](https://img.shields.io/pypi/v/promobot-appeal-processing?style=for-the-badge)](https://pypi.org/project/promobot-appeal-processing)
+[![Documentation](https://img.shields.io/badge/docs-4CAE4F?style=for-the-badge&logo=mdbook)](https://digital-fracture.github.io/promobot-appeal-processing)
 
------
+---
 
-**Table of Contents**
+**Documentation**: https://digital-fracture.github.io/promobot-appeal-processing
 
-- [Installation](#installation)
-- [License](#license)
 
 ## Installation
 
-```console
+```shell
 pip install promobot-appeal-processing
 ```
+
 
 ## License
 

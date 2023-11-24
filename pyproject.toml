@@ -34,7 +34,7 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/digital-fracture/promobot-appeal-processing#readme"
+Documentation = "https://digital-fracture.github.io/promobot-appeal-processing"
 Issues = "https://github.com/digital-fracture/promobot-appeal-processing/issues"
 Source = "https://github.com/digital-fracture/promobot-appeal-processing"
 
