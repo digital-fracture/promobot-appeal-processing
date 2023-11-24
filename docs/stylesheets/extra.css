@@ -1,0 +1,17 @@
+div.doc-contents > p:nth-last-of-type(2n + 3), /* 3rd element only if 4 are in total */
+div.doc-contents > p:nth-last-of-type(2n + 3) + * {
+    display: none;
+}
+
+.md-typeset .example > summary {
+    background-color: var(--md-accent-fg-color--transparent);
+}
+.md-typeset details.example {
+    border-color: var(--md-accent-fg-color);
+}
+.md-typeset .example > summary::before {
+    background-color: var(--md-accent-fg-color);
+}
+.md-typeset .example > summary::after {
+    color: var(--md-accent-fg-color);
+}

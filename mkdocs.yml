@@ -1,0 +1,47 @@
+site_name: Promobot Appeal Processing
+site_author: KruASe
+
+repo_name: digital-fracture/promobot-appeal-processing
+repo_url: https://github.com/digital-fracture/promobot-appeal-processing
+
+copyright: Copyright &copy; 2023 digital-fracture
+
+theme:
+    name: material
+    features:
+        - content.code.copy
+    palette:
+        scheme: slate
+        primary: green
+        accent: pink
+    font:
+        text: Inter
+        code: JetBrains Mono
+    language: en
+
+markdown_extensions:
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+
+plugins:
+    mkdocstrings:
+        handlers:
+            python:
+                paths: [src]
+                options:
+                    extensions:
+                        - griffe_typingdoc
+                    show_root_heading: true
+                    show_root_full_path: false
+                    show_signature_annotations: true
+                    show_if_no_docstring: true
+                    docstring_section_style: list
+                    members_order: source
+
+extra_css:
+    - stylesheets/extra.css
