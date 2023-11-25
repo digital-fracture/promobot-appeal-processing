@@ -5,7 +5,8 @@
 
 ---
 
-**Documentation**: https://digital-fracture.github.io/promobot-appeal-processing
+**Documentation**: https://digital-fracture.github.io/promobot-appeal-processing  
+[**Google Colab notebook with training code**](https://colab.research.google.com/drive/1iP3wqZ6wPlP2ZgsNOMA1QbTXDYUDZh82?authuser=1#scrollTo=e9WMNc-PPMZZ)
 
 
 ## Installation
@@ -13,6 +14,10 @@
 ```console
 pip install promobot-appeal-processing
 ```
+
+### Needed resource files
+Put [this](https://drive.google.com/drive/folders/1DCtSMZFLTbt6PpwNM5kBfao8FX2lOnjJ?usp=sharing) to the root directory
+of your project to let the package function properly
 
 
 ## Uses
