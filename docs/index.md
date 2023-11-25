@@ -2,7 +2,7 @@
 
 ## Installation
 
-```shell
+```console
 pip install promobot-appeal-processing
 ```
 

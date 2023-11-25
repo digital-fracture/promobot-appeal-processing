@@ -10,9 +10,14 @@
 
 ## Installation
 
-```shell
+```console
 pip install promobot-appeal-processing
 ```
+
+
+## Uses
+- [catboost](https://pypi.org/project/catboost)
+- [spaCy](https://pypi.org/project/spacy) - NER
 
 
 ## License

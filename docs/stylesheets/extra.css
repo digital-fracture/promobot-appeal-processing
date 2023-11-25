@@ -15,3 +15,8 @@ div.doc-contents > p:nth-last-of-type(2n + 3) + * {
 .md-typeset .example > summary::after {
     color: var(--md-accent-fg-color);
 }
+
+
+.excel {
+    color: var(--md-primary-fg-color);
+}
