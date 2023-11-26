@@ -30,7 +30,14 @@ classifiers = [
   "Natural Language :: Russian",
 ]
 dependencies = [
-
+  "numpy",
+  "pymystem3",
+  "nltk",
+  "sentence_transformers",
+  "gensim",
+  "catboost",
+  "joblib",
+  "spacy",
 ]
 
 [project.urls]

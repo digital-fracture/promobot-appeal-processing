@@ -16,7 +16,7 @@ def predict(text: str) -> Prediction:
     Returns:
         Predicted classification
     """
-    return model.predict(text)
+    return model.predict([text])
 
 
 async def predict_async(text: str) -> Prediction:
@@ -65,8 +65,8 @@ async def predict_many(texts: Iterable[str], max_workers: int) -> tuple[Predicti
 
         @app.post("/file")
         async def file(file: UploadFile):
-            contents = str(from_bytes(await file.read()).best()).strip()
-            csv_reader = csv.DictReader(io.StringIO(contents), delimiter=";")
+            contents = str(from_bytes(await file.read()).best()).strip() # (1)!
+            csv_reader = csv.DictReader(io.StringIO(contents), delimiter=";") # (2)!
             rows = tuple(csv_reader)
             texts = map(lambda row: row["text"], rows)
 
@@ -79,7 +79,10 @@ async def predict_many(texts: Iterable[str], max_workers: int) -> tuple[Predicti
             async with aiofiles.open(path := "temp.csv", "w", encoding="utf-8") as out_file:
                 csv_writer = aiocsv.AsyncDictWriter(
                     out_file,
-                    fieldnames=[*csv_reader.fieldnames, *map(lambda field: field.name, fields(Prediction))]
+                    fieldnames=[
+                        *csv_reader.fieldnames,
+                        *map(lambda field: field.name, fields(Prediction)) # (3)!
+                    ]
                 )
                 await csv_writer.writeheader()
 
@@ -92,6 +95,12 @@ async def predict_many(texts: Iterable[str], max_workers: int) -> tuple[Predicti
                 filename="predictions.csv"
             )
         ```
+
+        1.  Trying to properly decode binary ``UploadFile``
+        2.  European versions of :simple-microsoftexcel:{ .excel } **Microsoft Excel** export ``.csv`` files
+            with **semicolon** delimiter by default. If your ``.csv`` file has **comma** as a delimiter
+            you can remove this parameter (**comma** is the default parameter value).
+        3.  Adding predicted columns to the output ``.csv`` file
 
     Args:
         texts: Appeal texts
