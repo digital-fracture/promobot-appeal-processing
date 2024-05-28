@@ -45,6 +45,7 @@ plugins:
                     show_root_full_path: false
                     show_signature_annotations: true
                     show_if_no_docstring: true
+                    merge_init_into_class: true
                     docstring_section_style: list
                     members_order: source
 
